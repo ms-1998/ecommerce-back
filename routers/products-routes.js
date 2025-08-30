@@ -8,7 +8,7 @@ const router=express.Router()
 router.route("/")
         .get(products.getProducts)
         .post(handlejwt,allowedTo(values.ADMIN),upload.single("image"),products.postProduct)
-        // productValidation,
+        // productValidationf,
 router.get("/:id", products.getProduct)
 router.patch("/:id",handlejwt,allowedTo(values.ADMIN),products.updateProduct)
 router.delete("/:id",handlejwt,allowedTo(values.ADMIN),products.deleteProduct)
